@@ -2,6 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 from models import Demolis
+from models import Tribe
 
 
 class DemoliliAdmin(admin.ModelAdmin):
@@ -9,4 +10,8 @@ class DemoliliAdmin(admin.ModelAdmin):
     list_filter = ("sex",)
 
 
+class Demo4tribeAdmin(admin.ModelAdmin):
+    list_display = ["name", "descrip", 'owner']
+
 admin.site.register(Demolis, DemoliliAdmin)
+admin.site.register(Tribe, Demo4tribeAdmin)
