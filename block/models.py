@@ -19,7 +19,11 @@ class Demolis(models.Model):
 class Tribe(models.Model):
     name = models.CharField(u"板块名称", max_length=30)
     descrip = models.CharField(u"板块描述", max_length=30)
-    owner = models.ForeignKey(User, verbose_name="管理员")
+    manager = models.ForeignKey(User, verbose_name="管理员")
 
     def __unicode__(self):
         return self.name
+
+    class Meta:
+        verbose_name = u"板块lili"
+        verbose_name_plural = u"18天学会写网站(板块的描述)"

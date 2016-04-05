@@ -11,7 +11,7 @@ class DemoliliAdmin(admin.ModelAdmin):
 
 
 class Demo4tribeAdmin(admin.ModelAdmin):
-    list_display = ["name", "descrip", 'owner']
+    list_display = ["name", "descrip", 'manager']
 
 admin.site.register(Demolis, DemoliliAdmin)
 admin.site.register(Tribe, Demo4tribeAdmin)
